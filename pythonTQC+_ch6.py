@@ -34,10 +34,18 @@ TQC+ 程式語言Python 601 偶數索引值加總
 """
 # x=int(input())
 ll=[]
+summ=0
 for i in range(12):
     x=int(input())
     ll.append(x)
-for j in range()
+    if i%2==0:
+        summ=summ+x
+for j in range(0,12,3):
+    print('{:>3d}{:>3d}{:>3d}'.format(ll[j],ll[j+1],ll[j+2]))
+print(summ)
+#%%
+"""
+TQC+ 程式語言Python 602 撲克牌總和
 
 
 
