@@ -387,6 +387,115 @@ c: cat
 d: durian
 e: elephant
 """
+"""
+一個小範例
+d1={}
+d1['gg'] = '@@'
+"""
+d1={}
+print('Create dict1:')
+while True:
+    keyy=input('Key: ')
+    if keyy=='end':
+        break
+    d1[keyy]=input('Value: ')
+               
+d2={}
+print('Create dict2:')
+while True:
+    keyy=input('Key: ')
+    if keyy=='end':
+        break
+    d2[keyy]=input('Value: ')
+
+d1.update(d2)
+for i in sorted(d1.keys()):
+  print(i,": ",d1[i],sep="")
+#%%
+"""
+TQC+ 程式語言Python 709 詞典排序
+請撰寫一程式，輸入一顏色詞典color_dict
+（以輸入鍵值"end"作為輸入結束點，詞典中將不包含鍵值"end"），
+再根據key值的字母由小到大排序並輸出。
+
+輸入說明
+輸入一個詞典，直至end結束輸入
+輸出說明
+根據key值字母由小到大排序輸出
+
+輸入輸出範例
+輸入與輸出會交雜如下，輸出的部份以粗體字表示
+Key: Green Yellow
+Value: #ADFF2F
+Key: Snow
+Value: #FFFAFA
+Key: Gold
+Value: #FFD700
+Key: Red
+Value: #FF0000
+Key: White
+Value: #FFFFFF
+Key: Green
+Value: #008000
+Key: Black
+Value: #000000
+Key: end
+Black: #000000
+Gold: #FFD700
+Green: #008000
+Green Yellow: #ADFF2F
+Red: #FF0000
+Snow: #FFFAFA
+White: #FFFFFF
+"""
+dd={}
+while True:
+    keyy=input('Key: ')
+    if keyy=='end':
+        break
+    dd[keyy]=input('Value: ')
+for i in sorted(dd.keys()):
+    print(i,": ",dd[i],sep="")
+#%%
+"""
+TQC+ 程式語言Python 710 詞典搜尋
+請撰寫一程式，為一詞典輸入資料
+（以輸入鍵值"end"作為輸入結束點，詞典中將不包含鍵值"end"），
+再輸入一鍵值並檢視此鍵值是否存在於該詞典中。
+
+輸入說明
+先輸入一個詞典，直至end結束輸入，再輸入一個鍵值進行搜尋是否存在
+輸出說明
+鍵值是否存在詞典中
+
+輸入輸出範例
+輸入與輸出會交雜如下，輸出的部份以粗體字表示
+Key: 123-4567-89
+Value: Jennifer
+Key: 987-6543-21
+Value: Tommy
+Key: 246-8246-82
+Value: Kay
+Key: end
+Search key: 246-8246-82
+True
+"""
+dd={}
+while True:
+    keyy=input('Key: ')
+    if keyy=='end':
+        break
+    dd[keyy]=input('Value: ')
+sc=input("Search key: ")
+print(sc in dd.keys())
+
+
+
+
+
+
+
+
 
 
 
