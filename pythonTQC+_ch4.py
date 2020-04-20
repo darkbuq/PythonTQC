@@ -62,32 +62,39 @@ TQC+ 程式語言Python 403 倍數總和計算
 3
 21
 """
-a=int(input())
-b=int(input())
-
-l=[]
-printl=0
+a=eval(input())
+b=eval(input())
+c=0
+ALL=0
 for i in range(a,b+1):
-    
-    if i%4==0:
-        if printl%10==0:print()
-        l.append(i)
+    if i%4==0 or i%9==0:
+        c+=1
+        ALL+=i
         print('{:<4d}'.format(i),end='')
-        printl=printl+1
-    elif i%9==0:
-        if printl%10==0:print()
-        l.append(i)
-        print('{:<4d}'.format(i),end='')
-        printl=printl+1
-        
-print('\n',len(l),sep='')
-print(sum(l))
+        if c%10==0:
+            print()
+print("\n{}".format(c))
+print(ALL)
+#%%
+"""
+TQC+ 程式語言Python 404 數字反轉判斷
+請撰寫一程式，讓使用者輸入一個正整數，
+將此正整數以反轉的順序輸出，並判斷如輸入0，則輸出為0。
 
+輸入說明
+一個正整數或0
+輸出說明
+正整數反轉輸出。如輸入數值為0，輸出為0
 
-
-
-
-
+輸入輸出範例
+範例輸入1
+31283
+範例輸出1
+38213
+"""
+x=input()
+print(x[::-1])
+#%%
 
 
 
